@@ -54,6 +54,8 @@
   }
   .wrap { max-width: 1240px; margin: 0 auto; padding: 24px 16px 48px; }
   header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand img { height: 44px; width: auto; max-width: 160px; object-fit: contain; }
   h1 { font-size: 22px; margin: 0; letter-spacing: -.01em; }
   .sub { color: var(--text-muted); font-size: 13px; margin-top: 2px; }
   .actions { display: flex; gap: 8px; }
@@ -113,9 +115,12 @@
 <body>
 <div class="wrap">
   <header>
-    <div>
-      <h1>Dashboard Comercial</h1>
-      <div class="sub" id="updated">Cargando información…</div>
+    <div class="brand">
+      <img id="logo" src="logo.png" alt="Grupo El Comercio" onerror="this.style.display='none'">
+      <div>
+        <h1>Dashboard Comercial</h1>
+        <div class="sub" id="updated">Cargando información…</div>
+      </div>
     </div>
     <div class="actions">
       <button id="refresh" type="button" title="Volver a leer la base">Actualizar</button>
